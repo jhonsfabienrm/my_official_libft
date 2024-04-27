@@ -6,7 +6,7 @@
 /*   By: jramihaj <jramihaj@student.42tana.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 06:04:40 by jramihaj          #+#    #+#             */
-/*   Updated: 2024/03/28 22:25:46 by jramihaj         ###   ########.fr       */
+/*   Updated: 2024/04/27 10:03:51 by jramihaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_printf(const char *str, ...)
 	int		nb;
 
 	nb = 0;
+	if (!str)
+		return (-1);
 	va_start(point, str);
 	while (*str)
 	{
