@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_string_bonus.c                              :+:      :+:    :+:   */
+/*   ft_get_string.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jramihaj <jramihaj@student.42tana.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 09:17:49 by jramihaj          #+#    #+#             */
-/*   Updated: 2024/04/02 21:31:59 by jramihaj         ###   ########.fr       */
+/*   Updated: 2024/04/27 09:53:07 by jramihaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,6 @@
 
 char	*ft_get_string(va_list point, char spec)
 {
-	char	*hexa_basel;
-	char	*hexa_baseu;
-
-	hexa_basel = "0123456789abcdef";
-	hexa_baseu = "0123456789ABCDEF";
 	if (spec == 's')
 		return (ft_get_str(point));
 	else if (spec == 'p')
@@ -27,12 +22,9 @@ char	*ft_get_string(va_list point, char spec)
 		return (ft_get_int(point));
 	else if (spec == 'u')
 		return (ft_get_uint(point));
-	else if (spec == 'x' || spec == 'X')
-	{
-		if (spec == 'x')
-			return (ft_get_hexa(point, hexa_basel));
-		else
-			return (ft_get_hexa(point, hexa_baseu));
-	}
+	else if (spec == 'x')
+		return (ft_get_lhexa(point));
+	else if (spec == 'X')
+		return (ft_get_uhexa(point));
 	return (NULL);
 }

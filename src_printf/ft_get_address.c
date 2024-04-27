@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_address_bonus.c                             :+:      :+:    :+:   */
+/*   ft_get_address.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jramihaj <jramihaj@student.42tana.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 11:46:19 by jramihaj          #+#    #+#             */
-/*   Updated: 2024/04/04 10:23:31 by jramihaj         ###   ########.fr       */
+/*   Updated: 2024/04/27 09:49:44 by jramihaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ char	*ft_get_address(va_list point)
 	{
 		hexa_p = ft_itoa_base(p_ul, hexa_base);
 		string_got = ft_strjoin("0x", hexa_p);
-		if (hexa_p)
-			free(hexa_p);
+		free(hexa_p);
 	}
 	return (string_got);
 }

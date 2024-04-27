@@ -14,15 +14,9 @@ SRC_LIBFT = src_libft/ft_isalpha.c src_libft/ft_isdigit.c src_libft/ft_isalnum.c
 			src_libft/ft_lstclear.c src_libft/ft_lstiter.c src_libft/ft_itoa_base.c src_libft/ft_atoi_u.c
 
 SRC_PRINTF = src_printf/ft_printf.c src_printf/ft_printchar.c src_printf/ft_printstring.c\
-			src_printf/ft_percent_scan.c src_printf/ft_get_spec.c src_printf/ft_get_string.c\
+			src_printf/ft_get_string.c src_printf/ft_get_lhexa.c\
 			src_printf/ft_get_str.c src_printf/ft_get_address.c	src_printf/ft_get_int.c	src_printf/ft_get_uint.c\
-			src_printf/ft_get_hexa.c src_printf/ft_get_flag.c src_printf/ft_get_width.c\
-			src_printf/ft_get_precision.c	src_printf/ft_take_all.c src_printf/ft_take_char.c\
-			src_printf/ft_take_str.c src_printf/ft_take_address.c src_printf/ft_take_int.c\
-			src_printf/ft_take_uint.c src_printf/ft_take_hexa.c	src_printf/ft_width_mng.c src_printf/ft_isflag.c\
-			src_printf/ft_minus_flag.c src_printf/ft_zero_flag.c src_printf/ft_apply_flag_char.c\
-			src_printf/ft_apply_flag_str.c src_printf/ft_apply_flag_address.c src_printf/ft_apply_flag_int.c\
-			src_printf/ft_apply_flag_uint.c	src_printf/ft_apply_flag_hexa.c
+			src_printf/ft_get_uhexa.c\
 
 OBJ_LIBFT = ${SRC_LIBFT:.c=.o}
 

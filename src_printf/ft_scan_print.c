@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_apply_flag_int_bonus.c                          :+:      :+:    :+:   */
+/*   ft_scan_print.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jramihaj <jramihaj@student.42tana.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 10:34:49 by jramihaj          #+#    #+#             */
-/*   Updated: 2024/04/03 15:04:44 by jramihaj         ###   ########.fr       */
+/*   Created: 2024/03/28 22:25:51 by jramihaj          #+#    #+#             */
+/*   Updated: 2024/04/27 09:54:03 by jramihaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	ft_zero_flag_int(char *str)
+void	ft_scan_print(char spec, va_list point, int *nb)
 {
-	size_t	index;
+	char	*string_got;
 
-	index = 0;
-	while (str[index] == ' ')
-		index++;
-	if (str[index] == '-')
-	{
-		ft_memset(str, '-', 1);
-		ft_memset(str + 1, '0', index);
-	}
-	else
-		ft_zero_flag(str);
-}
-
-void	ft_apply_flag_int(char *str, char flag)
-{
-	if (flag == '-')
-		ft_minus_flag(str);
-	else if (flag == '0')
-		ft_zero_flag_int(str);
+	string_got = ft_get_string(point, spec);
+	ft_printstring(string_got, nb);
+	if (string_got)
+		free(string_got);
 }
